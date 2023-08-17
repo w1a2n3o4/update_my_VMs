@@ -12,7 +12,7 @@ pipeline {
         stage('Update ivan-nelub-testVM') {
             steps {
                 echo 'Start of Update ivan-nelub-testVM'
-                sh "apt update&&apt upgrade -y"
+                sh "sudo apt update&&apt upgrade -y"
                 echo 'End of Update ivan-nelub-testVM'
             }
         }
