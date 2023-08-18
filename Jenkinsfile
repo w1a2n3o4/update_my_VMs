@@ -20,7 +20,7 @@ pipeline {
          stage('Update ivan-nelub-testVM2 (ansible)') {
             steps {
                 echo 'Start of Update ivan-nelub-testVM2'
-                sh "ansible-playbook playbook-update-VM2.yml"
+                sh "ansible-playbook playbook-update-VM2.yml -v"
                 echo 'End of Update ivan-nelub-testVM2'
             }
         }
