@@ -9,7 +9,7 @@ pipeline {
                 echo 'End of Ansible ping'
             }
         }
-        stage('Update ivan-nelub-testVM') {
+        stage('Update ivan-nelub-testVM (local)') {
             steps {
                 echo 'Start of Update ivan-nelub-testVM'
                 sh "SUDO_ASKPASS=./pw.sh sudo -A apt update -y"
@@ -17,7 +17,7 @@ pipeline {
 		echo 'End of Update ivan-nelub-testVM'
             }
         }
-         stage('Update ivan-nelub-testVM2') {
+         stage('Update ivan-nelub-testVM2 (ansible)') {
             steps {
                 echo 'Start of Update ivan-nelub-testVM2'
                 sh "ansible-playbook playbook-update-VM2.yml"
