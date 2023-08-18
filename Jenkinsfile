@@ -12,8 +12,9 @@ pipeline {
         stage('Update ivan-nelub-testVM') {
             steps {
                 echo 'Start of Update ivan-nelub-testVM'
-                sh "SUDO_ASKPASS=./pw.sh sudo -A apt update&&apt upgrade -y"
-                echo 'End of Update ivan-nelub-testVM'
+                sh "SUDO_ASKPASS=./pw.sh sudo -A apt update -y"
+                sh "SUDO_ASKPASS=./pw.sh sudo -A apt upgrade -y"
+		echo 'End of Update ivan-nelub-testVM'
             }
         }
          stage('Update ivan-nelub-testVM2') {
